@@ -10,3 +10,9 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
 }
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
