@@ -3,10 +3,11 @@
 body {
     display: flex;
     min-height: 100vh;
-    /* border: 1px solid red; */
-
     padding: 0;
     margin: 0;
+
+    background-color: rgb(240, 238, 238);
+    font-family: sans-serif;
 }
 
 .side-bar {
@@ -17,13 +18,12 @@ body {
     background-color: pink;
     background-position: center;
 
-    position: relative;
-    /* border: 1px solid red; */
+    /* position: relative; */
 }
 
 .logo {
-    position: absolute;
-    top: 20vh;
+    /* position: absolute; */
+    margin-top: 20vh;
 
     background-color: rgba(127, 104, 245, 0.5);
     width: 100%;
@@ -32,8 +32,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-
-    /* border: 1px solid red; */
 }
 
 .main-content {
@@ -42,24 +40,36 @@ body {
     justify-content: space-between;
 }
 
-.side-bar>p {
-    position: absolute;
-    top: 93vh;
-    text-align: center;
-    width: 100%;
+.main-content>.form {
+    background-color: white;
+    box-shadow: 3px 3px 4px lightpink;
+}
 
+.side-bar>p {
+    margin-top: 55vh;
+
+    margin-left: 7vw;
+    white-space: nowrap;
     font-family: sans-serif;
     color: rgb(77, 75, 75);
     font-size: .75rem;
 }
 
 .logo>h1 {
-    font-size: 3rem;
+    font-size: 4.5rem;
     color: white;
     font-family: 'Delicious Handrawn', cursive;
     margin: 0;
     padding: 0;
     white-space: nowrap;
+}
+
+.main-content>div>p:first-child {
+    padding: 14vh;
+    /* width: 100%; */
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: rgb(77, 75, 75);
 }
 
 .side-bar>p>a {
