@@ -51,12 +51,12 @@ form>div {
     background-color: pink;
     background-position: center;
 
-    /* position: relative; */
+    position: relative;
 }
 
 .logo {
-    /* position: absolute; */
-    margin-top: 20vh;
+    position: absolute;
+    top: 20vh;
 
     background-color: rgba(127, 104, 245, 0.5);
     width: 100%;
@@ -71,7 +71,7 @@ form>div {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding-bottom: 30vh;
+    
     padding-top: 15vh;
 }
 
@@ -81,8 +81,10 @@ form>div {
 }
 
 .side-bar>p {
-    margin-top: 55vh;
-    margin-left: 7vw;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 95vh;
     white-space: nowrap;
     font-family: sans-serif;
     font-size: .75rem;
@@ -111,6 +113,7 @@ form>div {
 .main-content>div:last-child {
     padding-left: 5vh;
     padding-top: 3vh;
+    padding-bottom: min(30vh, 10vh);
 }
 
 .main-content>div:first-child>p {
