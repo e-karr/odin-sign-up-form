@@ -42,6 +42,17 @@ body {
     justify-content: space-between;
 }
 
+.side-bar>p {
+    position: absolute;
+    top: 93vh;
+    text-align: center;
+    width: 100%;
+
+    font-family: sans-serif;
+    color: rgb(77, 75, 75);
+    font-size: .75rem;
+}
+
 .logo>h1 {
     font-size: 3rem;
     color: white;
@@ -49,4 +60,8 @@ body {
     margin: 0;
     padding: 0;
     white-space: nowrap;
+}
+
+.side-bar>p>a {
+    color: rgb(77, 75, 75);
 }
