@@ -5,6 +5,7 @@ body {
     min-height: 100vh;
     padding: 0;
     margin: 0;
+    /* flex-wrap: wrap; */
 
     background-color: rgb(240, 238, 238);
     font-family: sans-serif;
@@ -20,6 +21,26 @@ button {
     padding: 10px 30px;
     box-shadow: 3px 3px 3px lightgrey;
     cursor: pointer;
+}
+
+label {
+    display: block;
+    text-transform: uppercase;
+    font-size: .75rem;
+    margin-bottom: .5vh;
+}
+
+input {
+    width: 200px;
+    height: 20px;
+}
+
+form>div {
+    display: flex;
+    gap: 3vw;
+    flex-wrap: wrap;
+
+    margin-bottom: 2vh;
 }
 
 .side-bar {
@@ -84,7 +105,7 @@ button {
 
 .main-content>div:nth-child(2) {
     padding-left: 5vh;
-    padding-bottom: 3vh;
+    padding-bottom: 2vh;
 }
 
 .main-content>div:last-child {
