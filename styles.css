@@ -1,0 +1,12 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    border: 1px solid red;
+}
+
+.side-bar {
+    background-image: url("./images/side-bar-img.jpg");
+    /* width: 100%; */
+    background-size: contain;
+    background-repeat: no-repeat;
+}
