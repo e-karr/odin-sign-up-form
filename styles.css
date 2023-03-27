@@ -39,6 +39,16 @@ input {
     box-shadow: inset 1px 1px 4px lightgrey
 }
 
+input:focus {
+    outline: none;
+    border: 1px solid rgb(127, 104, 245);
+    box-shadow: 1px 1px 4px rgb(246, 162, 237);
+}
+
+input:invalid {
+    border: 1px solid red;
+}
+
 form>div {
     display: flex;
     gap: 3vw;
