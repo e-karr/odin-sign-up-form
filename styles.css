@@ -77,6 +77,13 @@ form>div {
     padding-top: 15vh;
 }
 
+.placeholder {
+    font-size: .75rem;
+    width: 200px;
+    margin: 1px;
+    color: rgb(110, 110, 110)
+}
+
 .main-content>.form {
     background-color: white;
     box-shadow: 3px 3px 4px rgb(246, 162, 237);
