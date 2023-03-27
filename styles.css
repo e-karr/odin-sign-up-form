@@ -111,9 +111,26 @@ form>div {
     color: rgb(110, 110, 110)
 }
 
+.form {
+    display: flex;
+    gap: 5vh;
+}
+
 .main-content>.form {
     background-color: white;
     box-shadow: 3px 3px 4px rgb(246, 162, 237);
+}
+
+#message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 12vh;
+}
+
+#message>p {
+    margin: 5px;
+    font-size: .9rem;
 }
 
 .side-bar>p {
@@ -162,7 +179,7 @@ form>div {
     color: rgba(127, 104, 245);
 }
 
-.main-content>div:nth-child(2)>p:first-child {
+.main-content>div:nth-child(2)>div:first-child>p:first-child {
     font-weight: 700;
     font-size: 1.1rem;
 }
