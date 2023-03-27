@@ -36,6 +36,8 @@ input {
     border-radius: 3px;
     border: 1px solid lightgrey;
 
+    position: relative;
+
     box-shadow: inset 1px 1px 4px lightgrey
 }
 
@@ -45,8 +47,11 @@ input:focus {
     box-shadow: 1px 1px 4px rgb(246, 162, 237);
 }
 
-input:invalid {
-    border: 1px solid red;
+input:valid + .valid::before {
+    content: "✓";
+    color: green;
+    position: absolute;
+    margin-left: 2px;
 }
 
 form>div {

@@ -32,11 +32,13 @@
                     <div>
                         <label for="first-name">First Name<span><strong>*</strong></span></label>
                         <input id="first-name" type="text" name="first-name" required>
+                        <span class="valid"></span>
                     </div>
 
                     <div>
                         <label for="last-name">Last Name</label>
-                        <input type="text" id="last-name" name="last-name">
+                        <input type="text" id="last-name" name="last-name" required>
+                        <span class="valid"></span>
                     </div>
                 </div>
 
@@ -45,19 +47,21 @@
                         <label for="email">Email<span><strong>*</strong></span></label>
                         <p class="placeholder">youremail@example.com</p>
                         <input id="email" type="email" name="email" required>
+                        <span class="valid"></span>
                     </div>
 
                     <div>
                         <label for="phone-number">Phone Number<span><strong>*</strong></span></label>
                         <p class="placeholder">Format: 123-456-7890</p>
                         <input type="tel" id="phone-number" name="phone-number" required pattern="\d{3}[\-]\d{3}[\-]\d{4}">
+                        <span class="valid"></span>
                     </div>
                 </div>
 
                 <div>
                     <div>
                         <label for="password">Password<span><strong>*</strong></span></label>
-                        <input id="password" type="password" name="password" required minlength="8" maxlength="20" pattern="(?=.*\d)(?=.*\W+)(?![.\n])(?=.*[A-Z]).*$">
+                        <input id="password" type="password" name="password" required minlength="8" maxlength="20" pattern="(?=.*\d)(?=.*\W+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
                         <p class="placeholder">Must be 8-20 characters long and include at least 1 number, 1 capital letter, and 1 special character</p>
                     </div>
 
