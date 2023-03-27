@@ -35,6 +35,8 @@ input {
     height: 20px;
     border-radius: 3px;
     border: 1px solid lightgrey;
+
+    box-shadow: inset 1px 1px 4px lightgrey
 }
 
 form>div {
