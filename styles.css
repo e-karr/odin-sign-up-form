@@ -62,6 +62,16 @@ form>div {
     margin-bottom: 2vh;
 }
 
+.no-match::before {
+    content: "* Passwords do not match";
+    font-size: .75rem;
+    color: red;
+}
+
+.error {
+    border: 1px solid red;
+}
+
 .side-bar {
     background-image: url("./images/side-bar-img.jpg");
     width: 40%;
