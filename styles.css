@@ -128,7 +128,7 @@ form>div {
     color: rgba(127, 104, 245);
 }
 
-.main-content>div:nth-child(2)>p {
+.main-content>div:nth-child(2)>p:first-child {
     font-weight: 700;
     font-size: 1.1rem;
 }
