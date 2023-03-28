@@ -7,8 +7,6 @@ const password = document.querySelector("#password");
 const confirmPassword = document.querySelector("#confirm-pswd");
 const errorMessage = document.querySelector(".error-msg");
 
-const passwordList = document.querySelector("#message");
-
 const pswdLowercase = document.querySelector("#letter");
 const pswdCapital = document.querySelector("#capital");
 const pswdNumber = document.querySelector("#number");
@@ -41,14 +39,6 @@ confirmPassword.addEventListener('blur', () => {
         confirmPassword.classList.remove('error');
         errorMessage.classList.remove('no-match');
     }
-});
-
-password.addEventListener('focus', () => {
-    passwordList.style.display = "flex";
-});
-
-password.addEventListener('blur', () => {
-    passwordList.style.display = "none";
 });
 
 password.addEventListener('keyup', () => {

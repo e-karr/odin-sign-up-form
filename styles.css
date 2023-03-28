@@ -124,15 +124,13 @@ form>div {
 }
 
 #message {
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-top: 11vh;
-    padding-left: 5px;
+    padding-top: 8vh;
+    padding-left: 30px;
 
     position: relative;
-
-    /* border: 1px solid red; */
 }
 
 .pswd-valid {
