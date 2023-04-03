@@ -45,12 +45,12 @@ phoneNumber.addEventListener('focus', addInvalidClasses(phoneNumber));
 confirmPassword.addEventListener('blur', () => {
     if (password.value !== confirmPassword.value) {
         console.log("no match");
-        password.classList.add('error');
-        confirmPassword.classList.add('error');
+        password.classList.add('invalid');
+        confirmPassword.classList.add('invalid');
         errorMessage.classList.add('no-match');
     } else {
-        password.classList.remove('error');
-        confirmPassword.classList.remove('error');
+        password.classList.remove('invalid');
+        confirmPassword.classList.remove('invalid');
         errorMessage.classList.remove('no-match');
     }
 });

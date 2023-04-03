@@ -86,10 +86,6 @@ form>div {
     display: none;
 }
 
-.error {
-    border: 1px solid red;
-}
-
 .side-bar {
     background-image: url("./images/side-bar-img.jpg");
     width: 40%;
