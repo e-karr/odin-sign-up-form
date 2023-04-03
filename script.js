@@ -15,6 +15,7 @@ const pswdSpecialChar = document.querySelector("#special-char");
 const pswdLength = document.querySelector("#length");
 
 const createAccount = document.querySelector("#create-account");
+const form = document.querySelector("form");
 
 firstName.addEventListener('invalid', () => {
     firstName.setCustomValidity("Please enter your first name.");
@@ -100,14 +101,12 @@ password.addEventListener('keyup', () => {
     }
 });
 
-// createAccount.addEventListener('click', (event) => {
+// form.addEventListener('submit', (event) => {
+
+//     event.preventDefault();
 
 //     if (firstName.validity.valid && lastName.validity.valid && email.validity.valid && phoneNumber.validity.valid && password.validity.valid && confirmPassword.validity.valid) {
-//         document.querySelector("form").submit;
-//     } else {
-        
-        
-//         event.preventDefault();
+//         form.submit();
 //     }
 // });
 
