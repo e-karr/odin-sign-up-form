@@ -74,7 +74,7 @@ form>div {
     color: red;
     position: absolute;
     margin-left: 2px;
-} */
+}
 
 .logo-small {
     display: none;
@@ -89,6 +89,10 @@ form>div {
     background-position: center;
 
     position: relative;
+}
+
+#error-msg {
+    height: 1rem;
 }
 
 .logo {
@@ -117,6 +121,12 @@ form>div {
     width: 200px;
     margin: 1px;
     color: rgb(110, 110, 110)
+}
+
+.no-match::before {
+    content: "* Passwords do not match";
+    font-size: .75rem;
+    color: red;
 }
 
 .form {
@@ -218,7 +228,7 @@ form>div {
     color: rgb(77, 75, 75);
 }
 
-@media screen and (max-width: 975px) {
+@media screen and (max-width: 800px) {
     .side-bar {
         display: none;
     }

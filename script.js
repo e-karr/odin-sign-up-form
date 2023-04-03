@@ -41,17 +41,9 @@ phoneNumber.addEventListener('focus', addInvalidClasses(phoneNumber));
 
 password.addEventListener('focus', addInvalidClasses(password));
 
-confirmPassword.addEventListener('blur', () => {
-    if (password.value !== confirmPassword.value) {
-        confirmPassword.classList.add('invalid');
-        errorMessage.textContent = "* Passwords do not match"
-        errorMessage.style.fontSize = ".75rem";
-        errorMessage.style.color = "red";
-    } else {
-        confirmPassword.classList.remove('invalid');
-        errorMessage.textContent = "";
-    }
-});
+password.addEventListener('blur', confirmPasswordMatch);
+
+confirmPassword.addEventListener('blur', confirmPasswordMatch);
 
 password.addEventListener('keyup', () => {
     let lowerCaseLetters = /[a-z]/g;
@@ -104,4 +96,14 @@ function addInvalidClasses(element) {
     element.addEventListener('focusout', () => {
         element.classList.add('invalid');
     });
+}
+
+function confirmPasswordMatch() {
+    if (password.value !== confirmPassword.value) {
+        confirmPassword.classList.add('invalid');
+        errorMessage.classList.add('no-match');
+    } else {
+        confirmPassword.classList.remove('invalid');
+        errorMessage.classList.remove('no-match');
+    }
 }
