@@ -16,17 +16,29 @@ const pswdLength = document.querySelector("#length");
 
 const createAccount = document.querySelector("#create-account");
 
-firstName.addEventListener('invalid', setCustomErrorMessage(firstName, "Please enter your first name."));
+firstName.addEventListener('invalid', () => {
+    firstName.setCustomValidity("Please enter your first name.");
+});
 
-lastName.addEventListener('invalid', setCustomErrorMessage(lastName, "Please enter your last name."));
+lastName.addEventListener('invalid', () => {
+    lastName.setCustomValidity("Please enter your last name.");
+});
 
-email.addEventListener('invalid', setCustomErrorMessage(email, "Please enter a valid email"));
+email.addEventListener('invalid', () => {
+    email.setCustomValidity("Please enter a valid email.");
+});
 
-phoneNumber.addEventListener('invalid', setCustomErrorMessage(phoneNumber, "Please enter a valid phone number"));
+phoneNumber.addEventListener('invalid', () => {
+    phoneNumber.setCustomValidity("Please enter a valid phone number.");
+});
 
-password.addEventListener('invalid', setCustomErrorMessage(password, "Please enter a valid password."));
+password.addEventListener('invalid', () => {
+    password.setCustomValidity("Please enter a valid password.");
+});
 
-confirmPassword.addEventListener('invalid', setCustomErrorMessage(confirmPassword, "Please confirm password."));
+confirmPassword.addEventListener('invalid', () => {
+    confirmPassword.setCustomValidity("Please confirm password.");
+});
 
 firstName.addEventListener('focus', addInvalidClasses(firstName));
 
@@ -88,19 +100,15 @@ password.addEventListener('keyup', () => {
     }
 });
 
-createAccount.addEventListener('click', (event) => {
+// createAccount.addEventListener('click', (event) => {
 
-    if (firstName.validity.valid && lastName.validity.valid && email.validity.valid && phoneNumber.validity.valid && password.validity.valid && confirmPassword.validity.valid) {
-        document.querySelector("form").submit;
-    } else {
+//     if (firstName.validity.valid && lastName.validity.valid && email.validity.valid && phoneNumber.validity.valid && password.validity.valid && confirmPassword.validity.valid) {
+//         document.querySelector("form").submit;
+//     } else {
         
-        // event.preventDefault();
-    }
-});
-
-function setCustomErrorMessage(element, message) {
-    element.setCustomValidity(message);
-}
+//         // event.preventDefault();
+//     }
+// });
 
 function addInvalidClasses(element) {
 
