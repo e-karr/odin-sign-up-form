@@ -46,11 +46,11 @@ input:focus {
     box-shadow: 1px 1px 4px rgb(246, 162, 237);
 }
 
-input:valid {
+.form-field:valid {
     border: 1px solid green;
 }
 
-input:valid + .status::before {
+.form-field:valid + .status::before {
     content: "✓";
     color: green;
     position: absolute;
@@ -75,12 +75,6 @@ form>div {
     position: absolute;
     margin-left: 2px;
 } */
-
-.no-match::before {
-    content: "* Passwords do not match";
-    font-size: .75rem;
-    color: red;
-}
 
 .logo-small {
     display: none;

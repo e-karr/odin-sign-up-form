@@ -1,6 +1,3 @@
-window.addEventListener('load', () => {
-
-
 
 const firstName = document.querySelector("#first-name");
 const lastName = document.querySelector("#last-name");
@@ -9,7 +6,7 @@ const phoneNumber = document.querySelector("#phone-number");
 
 const password = document.querySelector("#password");
 const confirmPassword = document.querySelector("#confirm-pswd");
-const errorMessage = document.querySelector(".error-msg");
+const errorMessage = document.querySelector("#error-msg");
 
 const pswdLowercase = document.querySelector("#letter");
 const pswdCapital = document.querySelector("#capital");
@@ -42,16 +39,17 @@ phoneNumber.addEventListener('invalid', () => {
 
 phoneNumber.addEventListener('focus', addInvalidClasses(phoneNumber));
 
+password.addEventListener('focus', addInvalidClasses(password));
+
 confirmPassword.addEventListener('blur', () => {
     if (password.value !== confirmPassword.value) {
-        console.log("no match");
-        password.classList.add('invalid');
         confirmPassword.classList.add('invalid');
-        errorMessage.classList.add('no-match');
+        errorMessage.textContent = "* Passwords do not match"
+        errorMessage.style.fontSize = ".75rem";
+        errorMessage.style.color = "red";
     } else {
-        password.classList.remove('invalid');
         confirmPassword.classList.remove('invalid');
-        errorMessage.classList.remove('no-match');
+        errorMessage.textContent = "";
     }
 });
 
@@ -107,5 +105,3 @@ function addInvalidClasses(element) {
         element.classList.add('invalid');
     });
 }
-
-});
