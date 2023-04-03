@@ -1,3 +1,7 @@
+window.addEventListener('load', () => {
+
+
+
 const firstName = document.querySelector("#first-name");
 const lastName = document.querySelector("#last-name");
 const email = document.querySelector("#email");
@@ -15,22 +19,32 @@ const pswdLength = document.querySelector("#length");
 
 firstName.addEventListener('invalid', () => {
     firstName.setCustomValidity('Please enter your first name.');
+    
 });
+
+firstName.addEventListener('focus', addInvalidClasses(firstName));
 
 lastName.addEventListener('invalid', () => {
     lastName.setCustomValidity('Please enter your last name.');
 });
 
+lastName.addEventListener('focus', addInvalidClasses(lastName));
+
 email.addEventListener('invalid', () => {
     email.setCustomValidity('Please enter a valid email.');
 });
+
+email.addEventListener('focus', addInvalidClasses(email));
 
 phoneNumber.addEventListener('invalid', () => {
     phoneNumber.setCustomValidity('Please enter a valid phone number.');
 });
 
+phoneNumber.addEventListener('focus', addInvalidClasses(phoneNumber));
+
 confirmPassword.addEventListener('blur', () => {
     if (password.value !== confirmPassword.value) {
+        console.log("no match");
         password.classList.add('error');
         confirmPassword.classList.add('error');
         errorMessage.classList.add('no-match');
@@ -85,4 +99,13 @@ password.addEventListener('keyup', () => {
         pswdLength.classList.add('pswd-invalid');
         pswdLength.classList.remove('pswd-valid');
     }
+});
+
+function addInvalidClasses(element) {
+
+    element.addEventListener('focusout', () => {
+        element.classList.add('invalid');
+    });
+}
+
 });

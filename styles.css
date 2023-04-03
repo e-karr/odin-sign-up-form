@@ -46,7 +46,11 @@ input:focus {
     box-shadow: 1px 1px 4px rgb(246, 162, 237);
 }
 
-input:valid + .valid::before {
+input:valid {
+    border: 1px solid green;
+}
+
+input:valid + .status::before {
     content: "✓";
     color: green;
     position: absolute;
@@ -60,6 +64,17 @@ form>div {
 
     margin-bottom: 2vh;
 }
+
+.invalid {
+    border: 1px solid red;
+}
+
+.invalid + .status::before {
+    content: "✖";
+    color: red;
+    position: absolute;
+    margin-left: 2px;
+} */
 
 .no-match::before {
     content: "* Passwords do not match";
@@ -213,7 +228,7 @@ form>div {
     color: rgb(77, 75, 75);
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 975px) {
     .side-bar {
         display: none;
     }
