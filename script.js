@@ -16,30 +16,6 @@ const pswdLength = document.querySelector("#length");
 
 const createAccount = document.querySelector("#create-account");
 
-firstName.addEventListener('invalid', () => {
-    firstName.setCustomValidity("Please enter your first name.");
-});
-
-lastName.addEventListener('invalid', () => {
-    lastName.setCustomValidity("Please enter your last name.");
-});
-
-email.addEventListener('invalid', () => {
-    email.setCustomValidity("Please enter a valid email.");
-});
-
-phoneNumber.addEventListener('invalid', () => {
-    phoneNumber.setCustomValidity("Please enter a valid phone number.");
-});
-
-password.addEventListener('invalid', () => {
-    password.setCustomValidity("Please enter a valid password.");
-});
-
-confirmPassword.addEventListener('invalid', () => {
-    confirmPassword.setCustomValidity("Please confirm password.");
-});
-
 firstName.addEventListener('focus', addInvalidClasses(firstName));
 
 lastName.addEventListener('focus', addInvalidClasses(lastName));
@@ -100,15 +76,38 @@ password.addEventListener('keyup', () => {
     }
 });
 
-// createAccount.addEventListener('click', (event) => {
+createAccount.addEventListener('click', (event) => {
 
-//     if (firstName.validity.valid && lastName.validity.valid && email.validity.valid && phoneNumber.validity.valid && password.validity.valid && confirmPassword.validity.valid) {
-//         document.querySelector("form").submit;
-//     } else {
+    if (firstName.validity.valid && lastName.validity.valid && email.validity.valid && phoneNumber.validity.valid && password.validity.valid && confirmPassword.validity.valid) {
+        document.querySelector("form").submit;
+    } else {
+        firstName.addEventListener('invalid', () => {
+            firstName.setCustomValidity("Please enter your first name.");
+        });
         
-//         // event.preventDefault();
-//     }
-// });
+        lastName.addEventListener('invalid', () => {
+            lastName.setCustomValidity("Please enter your last name.");
+        });
+        
+        email.addEventListener('invalid', () => {
+            email.setCustomValidity("Please enter a valid email.");
+        });
+        
+        phoneNumber.addEventListener('invalid', () => {
+            phoneNumber.setCustomValidity("Please enter a valid phone number.");
+        });
+        
+        password.addEventListener('invalid', () => {
+            password.setCustomValidity("Please enter a valid password.");
+        });
+        
+        confirmPassword.addEventListener('invalid', () => {
+            confirmPassword.setCustomValidity("Please confirm password.");
+        });
+        
+        event.preventDefault();
+    }
+});
 
 function addInvalidClasses(element) {
 
