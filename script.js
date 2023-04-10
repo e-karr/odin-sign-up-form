@@ -17,29 +17,29 @@ const pswdLength = document.querySelector("#length");
 const createAccount = document.querySelector("#create-account");
 const form = document.querySelector("form");
 
-firstName.addEventListener('invalid', () => {
-    firstName.setCustomValidity("Please enter your first name.");
-});
+// firstName.addEventListener('invalid', () => {
+//     firstName.setCustomValidity("Please enter your first name.");
+// });
 
-lastName.addEventListener('invalid', () => {
-    lastName.setCustomValidity("Please enter your last name.");
-});
+// lastName.addEventListener('invalid', () => {
+//     lastName.setCustomValidity("Please enter your last name.");
+// });
 
-email.addEventListener('invalid', () => {
-    email.setCustomValidity("Please enter a valid email.");
-});
+// email.addEventListener('invalid', () => {
+//     email.setCustomValidity("Please enter a valid email.");
+// });
 
-phoneNumber.addEventListener('invalid', () => {
-    phoneNumber.setCustomValidity("Please enter a valid phone number.");
-});
+// phoneNumber.addEventListener('invalid', () => {
+//     phoneNumber.setCustomValidity("Please enter a valid phone number.");
+// });
 
-password.addEventListener('invalid', () => {
-    password.setCustomValidity("Please enter a valid password.");
-});
+// password.addEventListener('invalid', () => {
+//     password.setCustomValidity("Please enter a valid password.");
+// });
 
-confirmPassword.addEventListener('invalid', () => {
-    confirmPassword.setCustomValidity("Please confirm password.");
-});
+// confirmPassword.addEventListener('invalid', () => {
+//     confirmPassword.setCustomValidity("Please confirm password.");
+// });
 
 firstName.addEventListener('focus', addInvalidClasses(firstName));
 
@@ -103,10 +103,8 @@ password.addEventListener('keyup', () => {
 
 // form.addEventListener('submit', (event) => {
 
-//     event.preventDefault();
-
-//     if (firstName.validity.valid && lastName.validity.valid && email.validity.valid && phoneNumber.validity.valid && password.validity.valid && confirmPassword.validity.valid) {
-//         form.submit();
+//     if (!firstName.validity.valid && !lastName.validity.valid && !email.validity.valid && !phoneNumber.validity.valid && !password.validity.valid && !confirmPassword.validity.valid) {
+//         event.preventDefault();
 //     }
 // });
 
